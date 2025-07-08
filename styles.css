@@ -1,0 +1,79 @@
+body { font-family: Arial, sans-serif; padding: 16px; background: #181a20; color: #f1f1f1; min-width: 320px; min-height: 500px; border-radius: 10px; box-shadow: 0 2px 16px 0 #0004; }
+h2 { font-size: 18px; margin-bottom: 12px; color: #fff; }
+#copyBtn, #copyRandomBtn, #copyJsonBtn, #copyPostBtn { margin-bottom: 12px; margin-right: 8px; padding: 6px 16px; background: #2d8cf0; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
+#copyBtn:hover, #copyRandomBtn:hover, #copyJsonBtn:hover, #copyPostBtn:hover { background: #1a73e8; }
+#paramsList { max-height: 300px; min-height: 200px; overflow-y: auto; background: #23242a; border: 1px solid #23242a; border-radius: 6px; padding: 10px; transition: min-height 0.2s; }
+.param-item { margin-bottom: 8px; padding: 6px; border-bottom: 1px solid #23242a; display: flex; align-items: center; }
+.param-name { font-weight: bold; margin-right: 8px; color: #f1f1f1; }
+.param-type { font-size: 12px; padding: 2px 8px; border-radius: 10px; margin-left: auto; }
+.type-get { background: #1e293b; color: #60a5fa; }
+.type-post { background: #3b1e2e; color: #f472b6; }
+.type-hidden { background: #2d223b; color: #c084fc; }
+.type-cookie { background: #3b2a1e; color: #fbbf24; }
+.type-js { background: #1e3b2a; color: #34d399; }
+.type-xhr { background: #2d3748; color: #f87171; }
+#params { white-space: pre; }
+#filterBox { margin-bottom: 12px; }
+#filterBox label { margin-right: 10px; font-size: 13px; color: #bdbdbd; }
+#filterBox input[type="checkbox"] { accent-color: #2d8cf0; }
+#randomStringBox { background: #23242a; color: #f1f1f1; border: 1px solid #23242a; border-radius: 6px; padding: 8px; margin: 10px 0 16px 0; font-size: 13px; word-break: break-all; min-height: 20px; }
+#searchBox { width: 100%; margin-bottom: 12px; padding: 7px 10px; border-radius: 4px; border: 1px solid #23242a; background: #23242a; color: #f1f1f1; font-size: 14px; box-sizing: border-box; outline: none; transition: border 0.2s; }
+#searchBox:focus { border: 1.5px solid #2d8cf0; }
+#exportImportBox { margin-bottom: 12px; }
+#exportImportBox button { margin-right: 8px; margin-bottom: 6px; padding: 6px 12px; background: #23242a; color: #f1f1f1; border: 1px solid #2d8cf0; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background 0.2s, border 0.2s; }
+#exportImportBox button:hover { background: #2d8cf0; color: #fff; border: 1.5px solid #2d8cf0; }
+#randomPatternBox { margin-bottom: 12px; display: flex; align-items: center; flex-wrap: wrap; }
+#randomPatternBox label { color: #bdbdbd; font-size: 13px; margin-right: 10px; }
+#randomPatternBox input[type="text"] { background: #23242a; color: #f1f1f1; border: 1px solid #23242a; border-radius: 4px; padding: 3px 6px; font-size: 13px; margin-left: 2px; }
+#randomPatternBox select { background: #23242a; color: #f1f1f1; border: 1px solid #23242a; border-radius: 4px; padding: 3px 6px; font-size: 13px; margin-left: 2px; }
+.param-source-icon { margin-left: 6px; font-size: 13px; opacity: 0.7; cursor: pointer; vertical-align: middle; }
+.param-item[title] { position: relative; }
+.param-item[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #23242a;
+  color: #f1f1f1;
+  border: 1px solid #2d8cf0;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  margin-top: 2px;
+}
+#resetBtn { margin-bottom: 12px; margin-right: 8px; padding: 6px 16px; background: #444857; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
+#resetBtn:hover { background: #2d8cf0; }
+#rescanBtn { margin-bottom: 12px; margin-right: 8px; padding: 6px 16px; background: #2d8cf0; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
+#rescanBtn:hover { background: #1a73e8; }
+@media (max-width: 400px) {
+  body { padding: 4px; }
+  #paramsList, #randomStringBox { font-size: 11px; padding: 4px; }
+  #randomPatternBox label, #filterBox label { font-size: 10px; }
+  #searchBox { font-size: 11px; padding: 4px 4px; }
+  #resetBtn, #copyRandomBtn, #exportTextBtn, #importTextBtn { padding: 3px 6px; font-size: 11px; }
+  #paramCount { font-size: 11px; }
+  h2 { font-size: 15px; }
+}
+
+@media (max-width: 320px) {
+  #randomPatternBox, #filterBox { flex-direction: column; align-items: flex-start; }
+  #randomPatternBox label, #filterBox label { margin-bottom: 4px; }
+}
+
+.copied-flash {
+  animation: copiedFlash 0.7s;
+}
+@keyframes copiedFlash {
+  0% { background: #23242a; }
+  30% { background: #2d8cf0; color: #fff; }
+  100% { background: #23242a; }
+}
+#copiedMsg {
+  display: none;
+  color: #2d8cf0;
+  font-size: 13px;
+  margin-bottom: 6px;
+  text-align: right;
+} 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mamad parameter extention</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>mamad parameter extention</h2>
+  <div id="filterBox">
+    <label><input type="checkbox" class="type-filter" value="get" checked> GET</label>
+    <label><input type="checkbox" class="type-filter" value="post" checked> POST</label>
+    <label><input type="checkbox" class="type-filter" value="hidden" checked> Hidden</label>
+    <label><input type="checkbox" class="type-filter" value="cookie" checked> Cookie</label>
+    <label><input type="checkbox" class="type-filter" value="js" checked> JS</label>
+    <label style="white-space:nowrap;"><input type="checkbox" class="type-filter" value="xhr" checked> AJAX/XHR</label>
+  </div>
+  <input type="text" id="searchBox" placeholder="Search parameters..." autocomplete="off" />
+  <div id="exportImportBox">
+    <button id="exportTextBtn">Export Text</button>
+    <button id="importTextBtn">Import Text</button>
+  </div>
+  <input type="file" id="importTextInput" accept="text/plain" style="display:none" />
+  <div id="randomPatternBox">
+    <label style="margin-right:6px;">Prefix: <input type="text" id="randPrefix" value="XNLV" style="width:60px;" /></label>
+    <label style="margin-right:6px;">Type:
+      <select id="randType">
+        <option value="seq">Seq</option>
+        <option value="randnum">RandNum</option>
+        <option value="randstr">RandStr</option>
+        <option value="uuid">UUID</option>
+      </select>
+    </label>
+  </div>
+  <button id="copyRandomBtn">Copy as Randomized String</button>
+  <div id="randomStringBox"></div>
+  <button id="resetBtn" style="margin-bottom:12px;">Reset</button>
+  <button id="rescanBtn" style="margin-bottom:12px;">Rescan</button>
+  <div id="paramCount" style="margin-bottom:8px;font-size:13px;color:#bdbdbd;"></div>
+  <div id="paramsList"></div>
+  <div id="copiedMsg">Copied!</div>
+  <script src="popup.js"></script>
+</body>
+</html> 
