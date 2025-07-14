@@ -99,6 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
   };
 
+  // Copy All
+  document.getElementById('copyAllBtn').onclick = function() {
+    if (!filteredParams || filteredParams.length === 0) return;
+    const text = filteredParams.map(p => p.name).join('\n');
+    navigator.clipboard.writeText(text);
+    showCopiedFeedback();
+  };
+
   // Import Text
   document.getElementById('importTextBtn').onclick = function() {
     document.getElementById('importTextInput').click();

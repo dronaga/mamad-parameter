@@ -1,7 +1,7 @@
 body { font-family: Arial, sans-serif; padding: 16px; background: #181a20; color: #f1f1f1; min-width: 320px; min-height: 500px; border-radius: 10px; box-shadow: 0 2px 16px 0 #0004; }
 h2 { font-size: 18px; margin-bottom: 12px; color: #fff; }
-#copyBtn, #copyRandomBtn, #copyJsonBtn, #copyPostBtn { margin-bottom: 12px; margin-right: 8px; padding: 6px 16px; background: #2d8cf0; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
-#copyBtn:hover, #copyRandomBtn:hover, #copyJsonBtn:hover, #copyPostBtn:hover { background: #1a73e8; }
+#copyBtn, #copyRandomBtn, #copyJsonBtn, #copyPostBtn, #resetBtn, #rescanBtn { margin-bottom: 12px; margin-right: 8px; padding: 6px 16px; background: #2d8cf0; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; font-size: 13px; }
+#copyBtn:hover, #copyRandomBtn:hover, #copyJsonBtn:hover, #copyPostBtn:hover, #resetBtn:hover, #rescanBtn:hover { background: #1a73e8; }
 #paramsList { max-height: 300px; min-height: 200px; overflow-y: auto; background: #23242a; border: 1px solid #23242a; border-radius: 6px; padding: 10px; transition: min-height 0.2s; }
 .param-item { margin-bottom: 8px; padding: 6px; border-bottom: 1px solid #23242a; display: flex; align-items: center; }
 .param-name { font-weight: bold; margin-right: 8px; color: #f1f1f1; }
@@ -43,16 +43,13 @@ h2 { font-size: 18px; margin-bottom: 12px; color: #fff; }
   z-index: 10;
   margin-top: 2px;
 }
-#resetBtn { margin-bottom: 12px; margin-right: 8px; padding: 6px 16px; background: #444857; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
-#resetBtn:hover { background: #2d8cf0; }
-#rescanBtn { margin-bottom: 12px; margin-right: 8px; padding: 6px 16px; background: #2d8cf0; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
-#rescanBtn:hover { background: #1a73e8; }
+
 @media (max-width: 400px) {
   body { padding: 4px; }
   #paramsList, #randomStringBox { font-size: 11px; padding: 4px; }
   #randomPatternBox label, #filterBox label { font-size: 10px; }
   #searchBox { font-size: 11px; padding: 4px 4px; }
-  #resetBtn, #copyRandomBtn, #exportTextBtn, #importTextBtn { padding: 3px 6px; font-size: 11px; }
+  #resetBtn, #rescanBtn, #copyRandomBtn, #exportTextBtn, #importTextBtn { padding: 6px 16px; font-size: 13px; }
   #paramCount { font-size: 11px; }
   h2 { font-size: 15px; }
 }
